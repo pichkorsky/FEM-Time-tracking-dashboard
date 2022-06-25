@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --clr-light-red-work: hsl(15, 100%, 70%);
+    --clr-blue: hsl(246,80%, 60%);
+    --clr-soft-blue: hsl(195, 74%, 62%);
+    --clr-light-red-study: hsl(348, 100%, 68%);
+    --clr-lime-green: hsl(145, 58%, 55%);
+    --clr-violet: hsl(264, 64%, 52%);
+    --clr-soft-orange: hsl(43, 84%, 65%);
+
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+
+    --fs: 18px;
+
+    --border-radius: 1rem;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTAINERS */
+
+html {
+    font-family: 'Rubik';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 375px;
+    padding: 2rem 2rem;
+    background-color: var(--clr-very-dark-blue);
+}
+
+
+/* CARDS */
+.card {
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.card-content {
+    padding: 0 2rem;
+    border-radius: calc(var(--border-radius) - 0.2rem);
+    /*this calc() is a workaround to avoid color artifacts on corners*/
+}
+
+.background-dark {
+    background-color: var(--clr-dark-blue);
+}
+
+.background-light {
+    background-color: var(--clr-blue);
+}
+
+.theme-background {
+    padding-top: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: right 20px top -10px;
+}
+
+.theme-work {
+    background-image: url(./images/icon-work.svg);
+    background-color: var(--clr-light-red-work);
+}
+
+.theme-play {
+    background-image: url(./images/icon-play.svg);
+    background-color: var(--clr-soft-blue);
+}
+
+.theme-study {
+    background-image: url(./images/icon-study.svg);
+    background-color: var(--clr-light-red-study);
+}
+.theme-exercise {
+    background-image: url(./images/icon-exercise.svg);
+    background-color: var(--clr-lime-green);
+}
+.theme-social {
+    background-image: url(./images/icon-social.svg);
+    background-color: var(--clr-violet);
+}
+.theme-self-care {
+    background-image: url(./images/icon-self-care.svg);
+    background-color: var(--clr-soft-orange);
+}
+
+/* STATISTICS LAYOUT */
+.statistics-layout {
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.statistics-col-1 > p {
+    color: white;
+    font-size: 1.125rem;
+}
+
+.statistics-col-2 > p {
+    color: var(--clr-desaturated-blue);
+    text-align: right;
+}
+
+/* PROFILE CARD DETAILS */
+.avatar-section {
+    display: flex;
+    column-gap: 1rem;
+    color: var(--clr-pale-blue);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.avatar-section__col-1 {
+    flex: 1 0 0;
+    align-self: center;
+}
+
+.avatar-section__col-2 {
+    flex: 2 1 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar-section__img {
+    width: 5rem;
+    height: auto;
+
+    border-radius: 50%;
+    border: 3px solid white;
+
+    display: block;
+    /* margin: 0 auto; */
+}
+
+.avatar-section__name {
+    font-size: 1.125rem;
+    color: white;
+}
+
+
+/* PERIOD SELECTOR */
+.period-selector {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.period-selector > ul {
+ list-style: none;
+
+ display: flex;
+ justify-content: space-between;
+ 
+}
+
+.period-selector > ul > li {
+    /* display: inline-block; */
+    color: var(--clr-desaturated-blue);
+}
+
+.period-selector>ul>li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ATTRIBUTION SECTION */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width: 1440px){
+
+    /* LAYOUT DESCTOP */
+    .container {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr auto;
+
+        min-width: 1200px;
+        min-height: 100vh;
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .avatar-card {
+        grid-row: 1/3;
+    }
+
+    .attribution {
+        grid-column: 1/-1;
+    }
+
+    .statistics-layout {
+        height: 100%    ;
+    }
+
+    /*STYLING DESKTOP */
+    .avatar-card {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .avatar-section {
+        flex-grow: 7;
+        flex-direction: column;
+    }
+
+    .avatar-section__col-1 {
+        align-self:flex-start;
+    }
+
+    .avatar-section__col-2 {
+        justify-content: flex-start;
+    }
+
+    .avatar-section__name {
+        max-width: 7ch;
+        font-size: 2rem;
+    }
+
+    .period-selector {
+        flex-grow: 3;
+    }
+
+    .period-selector > ul {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        }
+
+
+}
