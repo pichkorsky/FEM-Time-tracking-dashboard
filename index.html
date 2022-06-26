@@ -1,80 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  Report for
-  Jeremy Robson
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
 
-  Daily
-  Weekly
-  Monthly
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./src/scss/index.css" />
+  </head>
+  <body>
+    <section class="time-tracking-dashboard">
+      <div class="card-main">
+        <div class="card-main__accaunt">
+          <div class="card-main__accaunt-img-wrapper">
+            <img src="./images/image-jeremy.png" alt="avatar" />
+          </div>
+          <div class="card-main__accaunt-description">
+            <p class="card-main__accaunt-description-title">Report for</p>
+            <p class="card-main__accaunt-description-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="card-main__control">
+          <ul class="card-main__control-buttons">
+            <li class="card-main__control-buttons-item">Daily</li>
+            <li class="card-main__control-buttons-item">Weekly</li>
+            <li class="card-main__control-buttons-item">Monthly</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="card__list">
+        <li class="card__list-work card" data-name="Work">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Work</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">5hrs</span>
+              <span class="card__body-time-before">Previous - 7hrs</span>
+            </div>
+          </div>
+        </li>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+        <li class="card__list-play card" data-name="Play">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Play</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">0hr</span>
+              <span class="card__body-time-before">Previous - 1hrs</span>
+            </div>
+          </div>
+        </li>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        <li class="card__list-study card" data-name="Study">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Study</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">1hr</span>
+              <span class="card__body-time-before">Previous - 2hrs</span>
+            </div>
+          </div>
+        </li>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+        <li class="card__list-exercise card" data-name="Exercise">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Exercise</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">1hr</span>
+              <span class="card__body-time-before">Previous - 1hrs</span>
+            </div>
+          </div>
+        </li>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+        <li class="card__list-social card" data-name="Social">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Social</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">3hr</span>
+              <span class="card__body-time-before">Previous - 2hrs</span>
+            </div>
+          </div>
+        </li>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+        <li class="card__list-self-care card" data-name="Self Care">
+          <div class="card__head"></div>
+          <div class="card__body">
+            <div>
+              <span class="card__body-title">Self Care</span>
+              <span class="card__body-menu">
+                <img src="./images/icon-ellipsis.svg" alt="" srcset="" />
+              </span>
+            </div>
+            <div>
+              <span class="card__body-time-now">0hr</span>
+              <span class="card__body-time-before">Previous - 2hrs</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@import "./reset.scss";
+@import "./colors";
+@import "./card-main.scss";
+@import "./cards.scss";
+
+html {
+  font-size: $font-size;
+  font-family: Rubik, sans-serif;
+  color: $color-text;
+}
+
+body {
+  background-color: $color-bg-body;
+  padding: 4.44rem 1.33rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-tracking-dashboard {
+  width: fit-content;
+
+  @media screen and (min-width: 70rem) {
+    display: flex;
+  }
+}
+
+.card__list {
+  @media screen and (min-width: 70rem) {
+    display: grid;
+
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-left: 1rem;
+  }
+}
+
+.active {
+  font-weight: 500;
+  opacity: 1;
+}

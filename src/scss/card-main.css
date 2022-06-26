@@ -1,0 +1,31 @@
+.card-main {
+  height: 11.28rem;
+  width: 18.11rem;
+  outline: rgb(6, 172, 0) solid 2px;
+  border-radius: 0.5rem;
+}
+.card-main__accaunt {
+  display: flex;
+  align-items: center;
+  outline: rgb(65, 204, 211) solid 2px;
+  height: 7.22rem;
+  border-radius: inherit;
+  padding: 1.78rem 1.56rem;
+}
+.card-main__accaunt-img-wrapper {
+  display: inline-block;
+  width: 3.89rem;
+  height: 3.89rem;
+  border-radius: 90%;
+  border: solid #fff 0.1rem;
+}
+.card-main__accaunt-img-wrapper > img {
+  width: 100%;
+}
+.card-main__accaunt-description {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.card-main__accaunt-description-title {
+  opacity: 75%;
+}/*# sourceMappingURL=card-main.css.map */

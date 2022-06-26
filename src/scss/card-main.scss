@@ -1,0 +1,111 @@
+.card-main {
+  position: relative;
+  height: 11.28rem;
+  width: 18.11rem;
+
+  border-radius: 0.5rem;
+
+  @media screen and (min-width: 70rem) {
+    width: 14.22rem;
+    height: 28.89rem;
+  }
+
+  &__accaunt {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    z-index: 10;
+
+    background-color: $color-bg-main-card;
+    height: 7.22rem;
+    border-radius: inherit;
+
+    padding: 1.78rem 1.56rem;
+
+    @media screen and (min-width: 70rem) {
+      height: 19.67rem;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+    }
+
+    &-img-wrapper {
+      display: inline-block;
+      width: 3.89rem;
+      height: 3.89rem;
+
+      border-radius: 90%;
+      border: solid #fff 0.2rem;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &-description {
+      display: inline-block;
+      margin-left: 1rem;
+
+      @media screen and (min-width: 70rem) {
+        margin-left: 0rem;
+        margin-top: 2.22rem;
+      }
+
+      &-title {
+        opacity: 75%;
+      }
+
+      &-name {
+        @media screen and (min-width: 70rem) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &__control {
+    position: absolute;
+
+    padding-top: 1.5rem;
+
+    z-index: 5;
+
+    background-color: $color-bg-card;
+
+    border-radius: 0 0 0.5rem 0.5rem;
+    bottom: 0.5rem;
+
+    height: 4rem;
+    width: 100%;
+
+    @media screen and (min-width: 70rem) {
+      height: 9.23rem;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+
+      @media screen and (min-width: 70rem) {
+        flex-direction: column;
+        height: 100%;
+        width: fit-content;
+        padding-left: 1rem;;
+      }
+
+      &-item {
+        transition-duration: 250ms;
+        transition-property: transform;
+        opacity: 75%;
+        &:hover {
+          transform: scale(150%);
+          text-shadow: 0px 0px 2rem $color-bg-main-card;
+          cursor: pointer;
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}

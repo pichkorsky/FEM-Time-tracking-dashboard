@@ -1,0 +1,10 @@
+.card {
+  height: 8.89rem;
+  width: 18.11rem;
+  outline: 2px solid aqua;
+  border-radius: 0.5rem;
+}
+.card__head {
+  height: 2.89rem;
+  background-color: var();
+}/*# sourceMappingURL=cards.css.map */
