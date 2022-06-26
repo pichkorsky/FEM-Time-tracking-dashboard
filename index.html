@@ -16,7 +16,7 @@
     />
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
-  <body>
+  <body onload="showStats('daily')">
     <div class="container">
       <!-- PROFILE -->
       <div class="card background-dark avatar-card">
@@ -38,7 +38,11 @@
         <!-- PERIOD SELECTOR -->
         <div class="card-content period-selector">
           <ul>
-            <li onclick="showStats('daily')" id="daily" class="selector">
+            <li
+              onclick="showStats('daily')"
+              id="daily"
+              class="selector period-selected"
+            >
               Daily
             </li>
             <li onclick="showStats('weekly')" id="weekly" class="selector">
@@ -59,8 +63,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="work" class="white-large">5hrs</p>
-            <p id="work-previous">Previous day - 7hrs</p>
+            <p id="work" class="white-large"></p>
+            <p id="work-previous"></p>
           </div>
         </div>
       </div>
@@ -73,8 +77,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="play" class="white-large">1hr</p>
-            <p id="play-previous">Last day - 2hrs</p>
+            <p id="play" class="white-large"></p>
+            <p id="play-previous"></p>
           </div>
         </div>
       </div>
@@ -87,8 +91,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="study" class="white-large">0hrs</p>
-            <p id="study-previous">Last day - 1hr</p>
+            <p id="study" class="white-large"></p>
+            <p id="study-previous"></p>
           </div>
         </div>
       </div>
@@ -101,8 +105,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="exercise" class="white-large">1hr</p>
-            <p id="exercise-previous">Last day - 1hr</p>
+            <p id="exercise" class="white-large"></p>
+            <p id="exercise-previous"></p>
           </div>
         </div>
       </div>
@@ -115,8 +119,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="social" class="white-large">1hr</p>
-            <p id="social-previous">Last day - 3hr</p>
+            <p id="social" class="white-large"></p>
+            <p id="social-previous"></p>
           </div>
         </div>
       </div>
@@ -129,8 +133,8 @@
             <p>***</p>
           </div>
           <div class="statistics-row-2">
-            <p id="self" class="white-large">0hrs</p>
-            <p id="self-previous">Last day - 1hr</p>
+            <p id="self" class="white-large"></p>
+            <p id="self-previous"></p>
           </div>
         </div>
       </div>
