@@ -33,6 +33,7 @@ data = JSON.parse(data);
 // period comes from clicked HTML element
 function showStats(period) {
 
+    // highlight selected period selector
     for (let selector of periodSelectors) {
 
         let selectorElement = document.getElementById(selector);
@@ -45,8 +46,7 @@ function showStats(period) {
         selectorElement.classList.remove("period-selected");
     }
 
-    // document.getElementById(period).style.color = "hsl(235, 45%, 61%)"
-
+    // update stats
     for (let i = 0; i <= 5; i++) {
         let currentHrs = data[i].timeframes[period].current;
         let previousHrs = data[i].timeframes[period].previous;
