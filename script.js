@@ -1,3 +1,5 @@
+const periodSelectors = ["daily", "weekly", "monthly"];
+
 const statsElements = [
     {
         current: "work",
@@ -28,7 +30,23 @@ const statsElements = [
 // data comes from data.json (HTML <script src="./data.json">)
 data = JSON.parse(data);
 
+// period comes from clicked HTML element
 function showStats(period) {
+
+    for (let selector of periodSelectors) {
+
+        let selectorElement = document.getElementById(selector);
+
+        if (selector == period) {
+            selectorElement.classList.add("period-selected");
+            continue;
+        }
+
+        selectorElement.classList.remove("period-selected");
+    }
+
+    // document.getElementById(period).style.color = "hsl(235, 45%, 61%)"
+
     for (let i = 0; i <= 5; i++) {
         let currentHrs = data[i].timeframes[period].current;
         let previousHrs = data[i].timeframes[period].previous;
